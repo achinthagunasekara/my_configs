@@ -22,4 +22,5 @@ if [ -f ~/.custom_functions ]; then
 fi
 
 PATH=$PATH:/Users/achinthag/Documents/Software/apache-maven-3.3.9/bin/
+PATH=$PATH:/Users/achinthag/Documents/Software/packer-1.1.2
 PATH=$PATH:/usr/local/mysql/bin
