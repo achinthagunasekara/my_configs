@@ -3,6 +3,8 @@ set number
 set tabstop=2
 syntax on
 set autoindent
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " set the runtime path to include Vundle and initialize
