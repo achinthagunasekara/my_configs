@@ -22,6 +22,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end() " End Vundle
 filetype plugin indent on
