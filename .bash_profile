@@ -23,4 +23,7 @@ fi
 
 PATH=$PATH:/Users/achinthag/Documents/Software/apache-maven-3.3.9/bin/
 PATH=$PATH:/Users/achinthag/Documents/Software/packer-1.1.2
+PATH=$PATH:/Users/achinthag/Documents/Software/kubectl-v1.8.5
 PATH=$PATH:/usr/local/mysql/bin
+
+alias pipupgradeall="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
