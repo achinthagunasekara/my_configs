@@ -18,11 +18,11 @@ Plugin 'VundleVim/Vundle.vim'
 " let Vundle manage Vundle, required
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end() " End Vundle
 filetype plugin indent on
@@ -31,6 +31,7 @@ filetype plugin indent on
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set statusline+=%{fugitive#statusline()}
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -52,3 +53,5 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+set laststatus=2
