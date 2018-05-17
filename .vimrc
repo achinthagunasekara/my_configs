@@ -2,6 +2,7 @@ set cursorline
 set number
 set tabstop=2
 syntax on
+colorscheme solarized
 set autoindent
 set tabstop=4
 set shiftwidth=4
