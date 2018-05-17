@@ -1,11 +1,10 @@
 # Define some colours
-RESET="\[\017\]"
-RED="\[\033[31;1m\]"
-GREEN="\[\033[0m\]"
-BLUE="\[\033[34m\]"
-YELLOW="\[\033[33;1m\]"
+RED="\\033[38;5;160m"
+RESET="\\033[0m"
+BLUE="\\033[38;5;33m"
+YELLOW="\\033[38;5;142m"
 
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C '/Users/achinthag/Library/Python/2.7/bin/aws_completer' aws
 
 export HISTCONTROL=ignoreboth:erasedups
 
@@ -14,7 +13,7 @@ git_prompt=/Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-pro
 git_complete=/Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 [[ -r $git_complete ]] && source $git_complete
 
-PS1="${BLUE}\u${GREEN}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s)')${GREEN}$ "
+PS1="${BLUE}\u${RESET}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s)')${RESET}$ "
 
 # Custom Functions
 if [ -f ~/.custom_functions ]; then
