@@ -1,8 +1,9 @@
 # Define some colours
-RED="\\033[38;5;160m"
-RESET="\\033[0m"
-BLUE="\\033[38;5;33m"
-YELLOW="\\033[38;5;142m"
+RESET="\[\033[0m\]"
+RED="\[\033[31;1m\]"
+GREEN="\[\033[0m\]"
+BLUE="\[\033[34m\]"
+YELLOW="\[\033[38;5;142m\]"
 
 complete -C '/Users/achinthag/Library/Python/2.7/bin/aws_completer' aws
 
