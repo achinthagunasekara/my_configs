@@ -43,18 +43,20 @@ let g:syntastic_check_on_wq = 0
 
 " ** LightLine **
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'gitbranch', 'syntastic_syntastic_statusline_flag', 'syntastic_warningmsg' ] ]
-      \ },
-      \ 'component': {
-      \   'syntastic_syntastic_statusline_flag': '%{SyntasticStatuslineFlag()}',
-      \   'syntastic_warningmsg': '%warningmsg',
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
+    \ 'colorscheme': 'wombat',
+    \ 'active': {
+    \     'left': [
+    \         [ 'mode', 'paste' ],
+    \         [ 'readonly', 'filename', 'modified', 'gitbranch', 'syntastic_syntastic_statusline_flag', 'syntastic_warningmsg' ]
+    \     ]
+    \ },
+    \ 'component': {
+    \   'syntastic_syntastic_statusline_flag': '%{SyntasticStatuslineFlag()}',
+    \   'syntastic_warningmsg': '%warningmsg',
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'fugitive#head'
+    \ },
+    \ }
 
 set laststatus=2
