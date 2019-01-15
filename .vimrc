@@ -24,7 +24,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'inkarkat/vim-spellcheck'
 Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end() " End Vundle
