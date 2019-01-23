@@ -11,9 +11,10 @@ complete -C '/usr/local/bin/aws_completer' aws
 export HISTCONTROL=ignoreboth:erasedups
 
 # Git auto complete
-git_prompt=/Applications/Xcode-10.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+GIT_PATH='/Applications/Xcode-10.app/Contents/Developer/usr/share/git-core'
+git_prompt="$GIT_PATH/git-prompt.sh"
 [[ -r $git_prompt ]] && source $git_prompt
-git_complete=/Applications/Xcode-10.app/Contents/Developer/usr/share/git-core/git-completion.bash
+git_complete="$GIT_PATH/git-completion.bash"
 [[ -r $git_complete ]] && source $git_complete
 
 # Include custom functions file
@@ -28,7 +29,7 @@ for EACH_TOOL in $MY_TOOLS; do
 done
 
 # Command to upgrade all pip packages
-alias pipupgradeall="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+alias pipupgradeall="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
