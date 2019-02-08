@@ -1,7 +1,6 @@
 # Define some colours and setup PS1
 RESET="\[\033[0m\]"
 RED="\[\033[31;1m\]"
-GREEN="\[\033[0m\]"
 BLUE="\[\033[34m\]"
 YELLOW="\[\033[38;5;142m\]"
 PS1="${BLUE}\u${RESET}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s)')${RESET}$ "
@@ -23,9 +22,9 @@ if [ -f ~/.custom_functions ]; then
 fi
 
 # Adding paths to usefull tools
-MY_TOOLS=`ls -F $HOME/Documents/Tools/ | grep "\/" `
-for EACH_TOOL in $MY_TOOLS; do
-  PATH="$PATH:$HOME/Documents/Tools/$EACH_TOOL"
+for TOOL in "$HOME"/Documents/Tools/*
+do
+    PATH="$PATH:$TOOL"
 done
 
 # Command to upgrade all pip packages
