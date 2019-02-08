@@ -12,13 +12,16 @@ export HISTCONTROL=ignoreboth:erasedups
 # Git auto complete
 GIT_PATH='/Applications/Xcode-10.app/Contents/Developer/usr/share/git-core'
 git_prompt="$GIT_PATH/git-prompt.sh"
+#shellcheck disable=SC1090
 [[ -r $git_prompt ]] && source $git_prompt
 git_complete="$GIT_PATH/git-completion.bash"
+#shellcheck disable=SC1090
 [[ -r $git_complete ]] && source $git_complete
 
 # Include custom functions file
 if [ -f ~/.custom_functions ]; then
-  source ~/.custom_functions
+    #shellcheck disable=SC1090
+    source ~/.custom_functions
 fi
 
 # Adding paths to usefull tools
@@ -31,7 +34,9 @@ done
 alias pipupgradeall="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
 
 export NVM_DIR="$HOME/.nvm"
+#shellcheck disable=SC1090
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#shellcheck disable=SC1090
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Set go path
