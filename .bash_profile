@@ -34,3 +34,7 @@ alias pipupgradeall="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xarg
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Set go path
+export GOPATH=$HOME/go
+PATH="$PATH:$HOME/go/bin"
