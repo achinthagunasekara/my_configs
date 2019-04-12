@@ -3,7 +3,8 @@ RESET="\[\033[0m\]"
 RED="\[\033[31;1m\]"
 BLUE="\[\033[34m\]"
 YELLOW="\[\033[38;5;142m\]"
-PS1="${BLUE}\u${RESET}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s)')${RESET}$ "
+
+PS1="${BLUE}\u${RESET}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s) ')${RESET}>> "
 
 complete -C '/usr/local/bin/aws_completer' aws
 
@@ -42,3 +43,6 @@ export NVM_DIR="$HOME/.nvm"
 # Set go path
 export GOPATH=$HOME/go
 PATH="$PATH:$HOME/go/bin"
+
+# My Aliases
+alias opsbox='ssh z-ops-agunasekara-seal'
