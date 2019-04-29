@@ -1,12 +1,15 @@
 set cursorline
 set number
-set tabstop=2
 syntax on
 colorscheme solarized
 set autoindent
 set tabstop=4
 set shiftwidth=4
-set expandtab
+
+let tab_fts = ['go']
+if index(tab_fts, &filetype) != -1
+    set expandtab
+endif
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -39,7 +42,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['golint']
+let g:syntastic_go_checkers = ['golint', 'govet']
 
 " ** LightLine **
 let g:lightline = {
