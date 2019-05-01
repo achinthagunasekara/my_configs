@@ -4,10 +4,7 @@ RED="\[\033[31;1m\]"
 BLUE="\[\033[34m\]"
 YELLOW="\[\033[38;5;142m\]"
 
-PS1="${BLUE}\u${RESET}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s) ')${RESET}>> "
-
 complete -C '/usr/local/bin/aws_completer' aws
-
 export HISTCONTROL=ignoreboth:erasedups
 
 # Git auto complete
@@ -18,6 +15,8 @@ git_prompt="$GIT_PATH/git-prompt.sh"
 git_complete="$GIT_PATH/git-completion.bash"
 #shellcheck disable=SC1090
 [[ -r $git_complete ]] && source $git_complete
+
+PS1="${BLUE}\u${RESET}@\h:${RED}\W ${YELLOW}\$(__git_ps1 '(%s) ')${RESET}>> "
 
 # Include custom functions file
 if [ -f ~/.custom_functions ]; then
@@ -45,4 +44,4 @@ export GOPATH=$HOME/go
 PATH="$PATH:$HOME/go/bin"
 
 # My Aliases
-alias opsbox='ssh z-ops-agunasekara-seal'
+alias opsbox='ssh z-ops-agunasekara-wildebeest'
