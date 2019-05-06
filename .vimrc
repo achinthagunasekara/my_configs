@@ -5,11 +5,11 @@ colorscheme solarized
 set autoindent
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
-let tab_fts = ['go']
-if index(tab_fts, &filetype) != -1
-    set expandtab
-endif
+" File type specific settings
+autocmd BufRead,BufNewFile *.go set noexpandtab
+autocmd BufRead,BufNewFile *.md set spell
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
