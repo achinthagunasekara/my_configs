@@ -45,3 +45,4 @@ PATH="$PATH:$HOME/go/bin"
 
 # My Aliases
 alias opsbox='ssh z-ops-agunasekara-wildebeest'
+alias opsjenkins='ssh build-ops-terraform-prod-iad-171m'
