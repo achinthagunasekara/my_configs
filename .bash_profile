@@ -8,11 +8,13 @@ complete -C '/usr/local/bin/aws_completer' aws
 export HISTCONTROL=ignoreboth:erasedups
 
 # Git auto complete
-GIT_PATH='/Applications/Xcode-10.app/Contents/Developer/usr/share/git-core'
-git_prompt="$GIT_PATH/git-prompt.sh"
+GIT_PATH='/Users/agunasekara/Documents/Git_Workspace/git/contrib/completion'
+
+git_prompt="${GIT_PATH}/git-prompt.sh"
 #shellcheck disable=SC1090
 [[ -r $git_prompt ]] && source $git_prompt
-git_complete="$GIT_PATH/git-completion.bash"
+
+git_complete="${GIT_PATH}/git-completion.bash"
 #shellcheck disable=SC1090
 [[ -r $git_complete ]] && source $git_complete
 
