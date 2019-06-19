@@ -46,5 +46,6 @@ export GOPATH=$HOME/go
 PATH="$PATH:$HOME/go/bin"
 
 # My Aliases
+alias flushdns='sudo killall -HUP mDNSResponder'
 alias opsbox='ssh z-ops-agunasekara-wildebeest'
 alias opsjenkins='ssh build-ops-terraform-prod-iad-171m'
