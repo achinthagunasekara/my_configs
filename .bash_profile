@@ -29,7 +29,11 @@ fi
 # Adding paths to usefull tools
 for TOOL in "$HOME"/Documents/Tools/*
 do
-    PATH="$PATH:$TOOL"
+    if [ -d "${TOOL}/bin" ]; then
+        PATH="$PATH:$TOOL/bin"
+    else
+        PATH="$PATH:$TOOL"
+    fi
 done
 
 # Command to upgrade all pip packages
