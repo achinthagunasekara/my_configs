@@ -31,3 +31,9 @@ function colors() {
         ((color++));
     done
 }
+
+function dockerclean() {
+    for id in $(docker ps -a | awk '{ print $1 }'); do
+        docker rm "$id"
+    done
+}
