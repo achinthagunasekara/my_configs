@@ -33,7 +33,7 @@ function colors() {
 }
 
 function dockerclean() {
-    for id in $(docker ps -a | awk '{ print $1 }'); do
+    for id in $(docker ps -a -q | awk '{ print $1 }'); do
         docker rm "$id"
     done
 }
