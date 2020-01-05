@@ -47,7 +47,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Set go path
 export GOPATH=$HOME/go
-PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 export GO111MODULE=on
 
 # My Aliases
