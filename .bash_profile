@@ -48,7 +48,12 @@ export NVM_DIR="$HOME/.nvm"
 # Set go path
 export GOPATH=$HOME/go
 export PATH="$PATH:$HOME/go/bin"
+export PATH=$PATH:/usr/local/go/bin
 export GO111MODULE=on
+
+# Make git use vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # My Aliases
 alias flushdns='sudo killall -HUP mDNSResponder'
