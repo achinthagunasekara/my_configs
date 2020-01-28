@@ -28,6 +28,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end() " End Vundle
 filetype plugin indent on
@@ -63,3 +64,8 @@ let g:lightline = {
     \ }
 
 set laststatus=2
+
+" ** vim-terraform "
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
