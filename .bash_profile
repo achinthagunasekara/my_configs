@@ -4,6 +4,8 @@ RED="\[\033[31;1m\]"
 BLUE="\[\033[34m\]"
 YELLOW="\[\033[38;5;142m\]"
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 complete -C '/usr/local/bin/aws_completer' aws
 export HISTCONTROL=ignoreboth:erasedups
 
@@ -57,5 +59,5 @@ export EDITOR="$VISUAL"
 
 # My Aliases
 alias flushdns='sudo killall -HUP mDNSResponder'
-alias opsbox='ssh z-ops-agunasekara-wildebeest'
+alias opsbox='ssh z-ops-slack-min-agunasekara-duck'
 alias opsjenkins='ssh build-ops-terraform-prod-iad-171m'
