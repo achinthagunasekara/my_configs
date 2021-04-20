@@ -33,12 +33,6 @@ function colors() {
 }
 
 function dockerclean() {
-    for id in $(docker ps -a -q | awk '{ print $1 }'); do
-        docker rm "$id"
-    done
-}
-
-function dockerclan() {
     docker rm -vf "$(docker ps -a -q)"
     docker rmi -f "$(docker images -a -q)"
 }
