@@ -42,3 +42,9 @@ function dockerclan() {
     docker rm -vf "$(docker ps -a -q)"
     docker rmi -f "$(docker images -a -q)"
 }
+
+function git_branch_clean() {
+    for branch in $(git branch | grep -v  \*); do
+        git branch -D "$branch"
+    done
+}
