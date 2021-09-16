@@ -59,5 +59,5 @@ export EDITOR="$VISUAL"
 
 # My Aliases
 alias flushdns='sudo killall -HUP mDNSResponder'
-alias opsbox='ssh z-ops-slack-min-agunasekara-duck'
+alias opsbox='ssh z-ops-whitecastle-agunasekara-monkey'
 alias opsjenkins='ssh build-ops-terraform-prod-iad-171m'
