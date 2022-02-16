@@ -42,3 +42,7 @@ function git_branch_clean() {
         git branch -D "$branch"
     done
 }
+
+function tf_clean() {
+    find terraform/ -name ".terraform" -exec rm -rf "{}" \;
+}
