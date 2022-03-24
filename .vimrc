@@ -29,6 +29,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'hashivim/vim-terraform'
+Plugin 'jbgutierrez/vim-better-comments'
 
 call vundle#end() " End Vundle
 filetype plugin indent on
