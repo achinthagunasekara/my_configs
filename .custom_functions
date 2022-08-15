@@ -46,3 +46,7 @@ function git_branch_clean() {
 function tf_clean() {
     find terraform/ -name ".terraform" -exec rm -rf "{}" \;
 }
+
+function flush_known_hosts() {
+    echo -n "" > ~/.ssh/known_hosts
+}
