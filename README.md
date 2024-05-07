@@ -22,5 +22,5 @@ git clone https://github.com/altercation/vim-colors-solarized.git
 ```
 
 ```
-cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+mkdir -p ~/.vim/colors/ && cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 ```
