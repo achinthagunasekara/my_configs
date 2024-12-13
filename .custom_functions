@@ -50,3 +50,7 @@ function tf_clean() {
 function flush_known_hosts() {
     echo -n "" > ~/.ssh/known_hosts
 }
+
+function flush_dictionary() {
+    echo -n "" > ~/Library/Spelling/LocalDictionary
+}
